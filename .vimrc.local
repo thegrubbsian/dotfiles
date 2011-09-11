@@ -1,0 +1,8 @@
+set guioptions=aAce
+color twilight
+set guifont=Consolas:h15
+let g:CommandTMaxFiles=50000
+
+nmap <Leader>ws :%s/\s\+$//<CR>
+map <S-Enter> O<Esc>
+map <CR> o<Esc>
