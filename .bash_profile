@@ -7,9 +7,6 @@ alias ss='script/server -u'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server -u'
 
-# Misc Ruby Aliases
-alias spec='spec -cfn'
-
 # PostgreSQL Aliases
 alias pgstart='pg_ctl -D /usr/local/postgres/ -l /usr/local/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/postgres stop -s -m fast'
