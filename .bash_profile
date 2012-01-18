@@ -1,4 +1,4 @@
-export PATH=$PATH:/usr/local/mysql/bin:/usr/local/lib/node_modules
+export PATH=/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/bin:$PATH
 
 # Rails Aliases
 alias be='bundle exec'
@@ -6,13 +6,15 @@ alias sc='script/console'
 alias ss='script/server -u'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server -u'
+alias re='ruby -e'
 
 # PostgreSQL Aliases
-alias pgstart='pg_ctl -D /usr/local/postgres/ -l /usr/local/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/postgres stop -s -m fast'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # Misc Aliases
 alias ctags="'brew --prefix'"/bin/ctags
+alias findn='find . -name'
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
