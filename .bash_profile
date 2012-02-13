@@ -6,15 +6,18 @@ alias sc='script/console'
 alias ss='script/server -u'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server -u'
-alias re='ruby -e'
+
+# Misc Ruby Aliases
+alias rspec='rspec -cfn'
+alias spec='spec -cfn'
 
 # PostgreSQL Aliases
-alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstart='pg_ctl -D /usr/local/var/postgres/ -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # Misc Aliases
-alias ctags="'brew --prefix'"/bin/ctags
 alias findn='find . -name'
+alias line_count='xargs wc -l | sort -n -r'
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -24,8 +27,8 @@ parse_git_branch() {
 }
 
 review-for-sha() {
-	parent=`git show $1^ --pretty=%H | awk 'NR==1 {print}'`
-	post-review --revision-range $parent:$1
+        parent=`git show $1^ --pretty=%H | awk 'NR==1 {print}'`
+        post-review --revision-range $parent:$1
 }
 
 export PS1='\u\[\e[1;37m\]@\[\e[1;32m\]\h\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '

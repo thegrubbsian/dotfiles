@@ -6,3 +6,7 @@ css=.sass,.scss
 js=.coffee
 --type-add
 html=.jst
+--type-add
+ruby=.feature
+--type-add
+ruby=.rake
