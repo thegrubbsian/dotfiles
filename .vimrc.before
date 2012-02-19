@@ -1,1 +1,5 @@
 call janus#disable_plugin('css-color')
+call janus#disable_plugin('nerdtree')
+call janus#disable_plugin('fugitive')
+call janus#disable_plugin('gundo')
+call janus#disable_plugin('pep8')

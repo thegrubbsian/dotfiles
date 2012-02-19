@@ -1,4 +1,5 @@
 set guioptions=aAce
+set statusline=%f\ %m\ %r
 color twilight
 set guifont=Consolas:h15
 let g:CommandTMaxFiles=50000
