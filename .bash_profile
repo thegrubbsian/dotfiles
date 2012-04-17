@@ -6,6 +6,8 @@ alias sc='script/console'
 alias ss='script/server -u'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server -u'
+alias ber='bundle exec rake'
+alias bes='bundle exec rspec'
 
 # Misc Ruby Aliases
 alias rspec='rspec -cfn'
@@ -27,8 +29,8 @@ parse_git_branch() {
 }
 
 review-for-sha() {
-        parent=`git show $1^ --pretty=%H | awk 'NR==1 {print}'`
-        post-review --revision-range $parent:$1
+  parent=`git show $1^ --pretty=%H | awk 'NR==1 {print}'`
+  post-review --revision-range $parent:$1
 }
 
 export PS1='\u\[\e[1;37m\]@\[\e[1;32m\]\h\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '

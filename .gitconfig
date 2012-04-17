@@ -5,17 +5,33 @@
   name = JC Grubbs
   email = jc.grubbs@devmynd.com
 
+[core]
+  editor = vim
+
 [alias]
   st = status
+  a = add
+  aa = add --all
   ci = commit
   br = branch
   co = checkout
   df = diff
-	pr = pull --rebase
+  pr = pull --rebase
   lg = log --pretty="format:'%h %ad | %an - %s%d'" --date=short
-	cp = cherry-pick
-	diffs = diff --cached
-	rp = remote prune
-	rpo = remote prune origin
-	gcp = gc --prune
-	panic = !tar cvf ../git_panic.tar .
+  cp = cherry-pick
+  diffs = diff --cached
+  rp = remote prune
+  rpo = remote prune origin
+  gcp = gc --prune
+  panic = !tar cvf ../git_panic.tar .
+  pom = push origin master
+  shown = show --pretty="format:" --name-only
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+  prompt = false
+
+[diff]
+  tool = Kaleidoscope
