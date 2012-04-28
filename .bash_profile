@@ -1,4 +1,4 @@
-export PATH=/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/bin:$PATH
+export PATH=$HOME/.rbenv/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/bin:$PATH
 
 # Rails Aliases
 alias be='bundle exec'
@@ -21,8 +21,8 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
 
-# Load RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# rbenv
+$(rbenv init -)
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
