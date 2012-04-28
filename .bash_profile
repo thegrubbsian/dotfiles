@@ -22,7 +22,7 @@ alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
 
 # rbenv
-$(rbenv init -)
+eval "$(rbenv init -)"
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
