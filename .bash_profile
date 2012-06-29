@@ -8,6 +8,7 @@ alias rc='bundle exec rails console'
 alias rs='bundle exec rails server -u'
 alias ber='bundle exec rake'
 alias bes='bundle exec rspec'
+alias beu='bundle exec unicorn -c config/unicorn.rb'
 
 # Misc Ruby Aliases
 alias rspec='rspec -cfn'
