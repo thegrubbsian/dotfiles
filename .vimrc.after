@@ -7,3 +7,5 @@ let g:CommandTMaxFiles=50000
 nmap <Leader>ws :%s/\s\+$//<CR><Esc>:noh<CR>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
+
+au BufNewFile,BufRead *.jst set filetype=html
