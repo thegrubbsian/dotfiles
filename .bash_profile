@@ -21,10 +21,12 @@ alias spec='spec -cfn'
 # PostgreSQL Aliases
 alias pgstart='pg_ctl -D /usr/local/var/postgres/ -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias pg='postgres -D /usr/local/psql/data/'
 
 # Misc Aliases
 alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
+alias v='mvim .'
 
 # rbenv
 eval "$(rbenv init -)"
