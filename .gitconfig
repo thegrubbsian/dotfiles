@@ -12,7 +12,7 @@
   st = status
   a = add
   aa = add --all
-  ci = commit
+  ci = "commit -m"
   br = branch
   co = checkout
   df = diff

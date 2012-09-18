@@ -2,6 +2,9 @@ export PATH=$HOME/.rbenv/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/u
 
 # Git Aliases
 alias gc='git commit -m'
+alias ga='git add .'
+alias gap='git add -p'
+alias gdiff='git difftool'
 
 # Rails Aliases
 alias be='bundle exec'
