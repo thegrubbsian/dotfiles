@@ -1,8 +1,13 @@
 export PATH=$HOME/.rbenv/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/bin:$PATH
 
+# Path Aliases
+alias s='cd ~/source'
+
 # Git Aliases
 alias gc='git commit -m'
 alias ga='git add .'
+alias gp='git push'
+alias gs='git status'
 alias gap='git add -p'
 alias gdiff='git difftool'
 
