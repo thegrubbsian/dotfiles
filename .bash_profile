@@ -5,7 +5,7 @@ alias s='cd ~/source'
 
 # Git Aliases
 alias gc='git commit -m'
-alias ga='git add .'
+alias ga='git add'
 alias gp='git push'
 alias gs='git status'
 alias gap='git add -p'
