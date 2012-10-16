@@ -25,6 +25,7 @@ alias fs='foreman start -f'
 # Misc Ruby Aliases
 alias rspec='rspec -cfn'
 alias spec='spec -cfn'
+alias r='rake'
 
 # PostgreSQL Aliases
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
