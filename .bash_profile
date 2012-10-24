@@ -25,6 +25,7 @@ alias fs='foreman start -f'
 # Misc Ruby Aliases
 alias rspec='rspec -cfn'
 alias spec='spec -cfn'
+alias sp='sp -cnf'
 alias r='rake'
 
 # PostgreSQL Aliases
