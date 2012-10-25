@@ -27,6 +27,9 @@
   pom = push origin master
   shown = show --pretty="format:" --name-only
 
+[push]
+  default = current
+
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 
@@ -34,6 +37,4 @@
   prompt = false
 
 [diff]
-  tool = Kaleidoscope
-[push]
-	default = current
+	tool = Kaleidoscope
