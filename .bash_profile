@@ -1,7 +1,4 @@
-export PATH=$HOME/.rbenv/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/bin:$PATH
-
-# Path Aliases
-alias s='cd ~/source'
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
 
 # Git Aliases
 alias gc='git commit -m'
@@ -13,16 +10,11 @@ alias gd='git difftool'
 
 # Rails Aliases
 alias be='bundle exec'
-alias sc='script/console'
-alias ss='script/server -u'
-alias rc='bundle exec rails console'
-alias rs='bundle exec rails server -u'
-alias ber='bundle exec rake'
-alias bes='bundle exec rspec'
-alias beu='bundle exec unicorn -c config/unicorn.rb'
-alias fs='foreman start -f'
+alias rc='rails console'
+alias rs='rails server -u'
 
 # Misc Ruby Aliases
+alias fs='foreman start -f'
 alias sp='rspec -cfn'
 alias r='rake'
 
@@ -40,11 +32,6 @@ eval "$(rbenv init -)"
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
-}
-
-review-for-sha() {
-  parent=`git show $1^ --pretty=%H | awk 'NR==1 {print}'`
-  post-review --revision-range $parent:$1
 }
 
 export PS1='\u\[\e[1;37m\]@\[\e[1;32m\]\h\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '
