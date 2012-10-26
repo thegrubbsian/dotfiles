@@ -9,7 +9,7 @@ alias ga='git add'
 alias gp='git push'
 alias gs='git status'
 alias gap='git add -p'
-alias gdiff='git difftool'
+alias gd='git difftool'
 
 # Rails Aliases
 alias be='bundle exec'
