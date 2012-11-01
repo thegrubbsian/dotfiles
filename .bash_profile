@@ -11,7 +11,7 @@ alias gd='git difftool'
 # Rails Aliases
 alias be='bundle exec'
 alias rc='rails console'
-alias rs='rails server -u'
+alias rs='rails server'
 
 # Misc Ruby Aliases
 alias fs='foreman start -f'
