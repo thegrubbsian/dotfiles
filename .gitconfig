@@ -18,6 +18,7 @@
   df = diff
   pr = pull --rebase
   lg = "!source ~/.githelpers && pretty_git_log"
+  hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %C(magenta)%cn%Creset%C(yellow)%d%Creset%n        %s\" --graph --date=local
   cp = cherry-pick
   diffs = diff --cached
   rp = remote prune
