@@ -2,6 +2,9 @@ export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
 
 # Git Aliases
 alias gc='git commit -m'
+alias gca='git commit --amend'
+alias gm='git mv'
+alias gr='git rm'
 alias ga='git add'
 alias gp='git push'
 alias gs='git status'

@@ -1,7 +1,7 @@
 set guioptions=aAce
 set statusline=%f\ %m\ %r
 color twilight
-set guifont=Monaco:h12
+set guifont=Monaco:h14
 let g:CommandTMaxFiles=50000
 
 nmap <Leader>ws :%s/\s\+$//<CR><Esc>:noh<CR>
