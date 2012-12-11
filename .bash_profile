@@ -1,19 +1,21 @@
 export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
 
 # Git Aliases
+alias ga='git add'
+alias gap='git add -p'
 alias gc='git commit -m'
 alias gca='git commit --amend'
-alias gm='git mv'
-alias gr='git rm'
-alias ga='git add'
-alias gp='git push'
-alias gs='git status'
-alias gap='git add -p'
 alias gd='git difftool'
 alias gdc='git difftool --cached'
 alias gl='git hist'
 alias gl5='git hist -5'
 alias gl10='git hist -10'
+alias gm='git mv'
+alias gp='git push'
+alias gpl='git pull'
+alias gpr='git pull --rebase'
+alias gr='git rm'
+alias gs='git status'
 alias gsa='git show'
 alias gsf='git show --pretty="format:" --name-only'
 
@@ -24,8 +26,8 @@ alias rs='rails server'
 
 # Misc Ruby Aliases
 alias fs='foreman start -f'
-alias sp='rspec -cfn'
 alias r='rake'
+alias sp='rspec -cfn'
 
 # PostgreSQL Aliases
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'

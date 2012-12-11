@@ -9,3 +9,8 @@ map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
 au BufNewFile,BufRead *.jst set filetype=html
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
