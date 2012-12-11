@@ -39,7 +39,7 @@ alias line_count='xargs wc -l | sort -n -r'
 alias v='mvim .'
 
 # rbenv
-eval "$(rbenv init -)"
+eval "$(rbenv init - --no-rehash)"
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
