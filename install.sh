@@ -29,3 +29,6 @@ ln -s ~/source/dotfiles/.irbrc .irbrc
 
 rm ~/.vimrc.after
 ln -s ~/source/dotfiles/.vimrc.after .vimrc.after
+
+rm ~/.tmux.conf
+ln -s ~/source/dotfiles/.tmux.conf .tmux.conf

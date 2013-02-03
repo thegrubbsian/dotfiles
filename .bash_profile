@@ -1,4 +1,5 @@
 export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
+export BUNDLER_EDITOR=vim
 
 # Git Aliases
 alias ga='git add'
@@ -20,6 +21,10 @@ alias gs='git status'
 alias gsa='git show'
 alias gsf='git show --pretty="format:" --name-only'
 
+# TMUX Aliases
+export TERM="xterm-256color"
+alias tumx='tmux -2'
+
 # Rails Aliases
 alias be='bundle exec'
 alias rc='rails console'
@@ -39,12 +44,17 @@ alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
 alias v='mvim .'
 
-# rbenv
-eval "$(rbenv init - --no-rehash)"
-
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
 }
 
 export PS1='\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+# auto-gemsets
+source /usr/local/share/auto-gemsets/auto-gemsets.sh
+source /usr/local/share/auto-gemsets/default-gems.sh

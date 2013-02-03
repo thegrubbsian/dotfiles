@@ -1,12 +1,15 @@
 set guioptions=aAce
 set statusline=%f\ %m\ %r
-color twilight
-set guifont=Monaco:h14
+color railscasts
+set guifont=Inconsolata:h16
 let g:CommandTMaxFiles=50000
 
+" clear whitespace
 nmap <Leader>ws :%s/\s\+$//<CR><Esc>:noh<CR>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
+
+nmap <C-f> :CtrlP<CR>
 
 au BufNewFile,BufRead *.jst set filetype=html
 
@@ -14,3 +17,7 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+
+" Bar cursor for insert mode
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
