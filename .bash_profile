@@ -24,6 +24,10 @@ alias gsf='git show --pretty="format:" --name-only'
 # TMUX Aliases
 export TERM="xterm-256color"
 alias tumx='tmux -2'
+alias tls='tmux ls'
+alias ta='tmux attach -t'
+alias tk='tmux kill-session -t'
+alias tn='tmux new -s'
 
 # Rails Aliases
 alias be='bundle exec'
