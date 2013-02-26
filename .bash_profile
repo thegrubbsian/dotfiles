@@ -1,5 +1,6 @@
 export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
 export BUNDLER_EDITOR=vim
+export EDITOR=vim
 
 # Git Aliases
 alias ga='git add'
@@ -58,7 +59,3 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 # chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-
-# auto-gemsets
-source /usr/local/share/auto-gemsets/auto-gemsets.sh
-source /usr/local/share/auto-gemsets/default-gems.sh
