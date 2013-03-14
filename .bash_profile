@@ -24,7 +24,6 @@ alias gsf='git show --pretty="format:" --name-only'
 
 # TMUX Aliases
 export TERM="xterm-256color"
-alias tumx='tmux -2'
 alias tls='tmux ls'
 alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
@@ -47,7 +46,7 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 # Misc Aliases
 alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
-alias v='mvim .'
+alias v='vim .'
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
