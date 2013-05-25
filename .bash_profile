@@ -1,4 +1,4 @@
-export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
 
@@ -31,17 +31,22 @@ alias tn='tmux new -s'
 
 # Rails Aliases
 alias be='bundle exec'
-alias rc='rails console'
-alias rs='rails server'
+alias rc='bundle exec rails console'
+alias rs='bundle exec rails server'
+alias pry='bundle exec pry'
 
 # Misc Ruby Aliases
 alias fs='foreman start -f'
 alias r='rake'
 alias sp='rspec -cfn'
+alias ts='rake minitest:all:quick'
 
 # PostgreSQL Aliases
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
+# Elasticsearch Aliases
+alias elastic='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 
 # Misc Aliases
 alias findn='find . -name'
@@ -55,6 +60,6 @@ parse_git_branch() {
 export PS1='\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
-# chruby
+# Chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh

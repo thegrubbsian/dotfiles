@@ -1,5 +1,6 @@
 set guioptions=aAce
 set statusline=%f\ %m\ %r
+set nowrap
 color railscasts
 set guifont=Inconsolata:h16
 let g:CommandTMaxFiles=50000
