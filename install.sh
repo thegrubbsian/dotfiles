@@ -25,7 +25,7 @@ rm ~/.rspec
 ln -s ~/source/dotfiles/.rspec .rspec
 
 rm ~/.tmux
-ln -s ~/source/dotfiles/.tmux .tmux
+ln -s ~/source/dotfiles/tmux .tmux
 
 rm ~/.tmux.conf
 ln -s ~/source/dotfiles/.tmux.conf .tmux.conf
