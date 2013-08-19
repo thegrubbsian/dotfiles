@@ -3,4 +3,5 @@
 --type-add=js=.coffee
 --type-add=html=.jst
 --type-add=ruby=.rake,.thor,.feature,Gemfile
+--type-add=ruby=.yml
 --ignore-dir=coverage

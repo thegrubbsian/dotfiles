@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
 
@@ -34,12 +34,17 @@ alias be='bundle exec'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server'
 alias pry='bundle exec pry'
+alias rg='bundle exec rails g'
 
 # Misc Ruby Aliases
-alias fs='foreman start -f'
-alias r='rake'
-alias sp='rspec -cfn'
-alias ts='rake minitest:all:quick'
+alias fs='bundle exec foreman start -f'
+alias r='bundle exec rake'
+alias sp='bundle exec rspec -cfn'
+alias ts='bundle exec rake minitest:all:quick'
+alias ios='open -a iPhone\ Simulator'
+
+# Phonegap Aliases
+alias pb='phonegap build'
 
 # PostgreSQL Aliases
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
