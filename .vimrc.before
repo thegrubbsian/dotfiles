@@ -3,3 +3,6 @@ call janus#disable_plugin('nerdtree')
 call janus#disable_plugin('fugitive')
 call janus#disable_plugin('gundo')
 call janus#disable_plugin('pep8')
+
+au BufNewFile,BufRead *.clj setfiletype clojure
+au BufNewFile,BufRead *.clj call PareditInitBuffer()

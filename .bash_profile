@@ -47,16 +47,21 @@ alias ios='open -a iPhone\ Simulator'
 alias pb='phonegap build'
 
 # PostgreSQL Aliases
-alias pgstart='pg_ctl -D /usr/local/var/postgres -l logfile start'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/logfile start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # Elasticsearch Aliases
 alias elastic='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 
+# Heroku Aliases
+alias hl='heroku logs --tail'
+alias hc='heroku run console'
+
 # Misc Aliases
 alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
 alias v='vim .'
+alias reload='source ~/.bash_profile'
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
