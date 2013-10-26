@@ -14,6 +14,7 @@
   aa = add --all
   ci = "commit -m"
   br = branch
+  track = branch --set-upstream-to
   co = checkout
   df = diff
   pr = pull --rebase
