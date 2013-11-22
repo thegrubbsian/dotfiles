@@ -54,14 +54,18 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias elastic='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 
 # Heroku Aliases
+alias h='heroku'
 alias hl='heroku logs --tail'
 alias hc='heroku run console'
+alias hr='heroku run'
 
 # Misc Aliases
 alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
 alias v='vim .'
 alias reload='source ~/.bash_profile'
+alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
+alias tag='ctags -R'
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'

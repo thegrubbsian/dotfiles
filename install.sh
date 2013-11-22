@@ -35,3 +35,6 @@ ln -s ~/source/dotfiles/.vimrc.after .vimrc.after
 
 rm ~/.vimrc.before
 ln -s ~/source/dotfiles/.vimrc.before .vimrc.before
+
+rm ~/.ctags
+ln -s ~/source/dotfiles/.ctags .ctags
