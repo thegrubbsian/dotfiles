@@ -41,7 +41,6 @@ alias fs='bundle exec foreman start -f'
 alias r='bundle exec rake'
 alias sp='bundle exec rspec -cfn'
 alias ts='bundle exec rake minitest:all:quick'
-alias ios='open -a iPhone\ Simulator'
 
 # Phonegap Aliases
 alias pb='phonegap build'
@@ -66,6 +65,7 @@ alias v='vim .'
 alias reload='source ~/.bash_profile'
 alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 alias tag='ctags -R'
+alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'

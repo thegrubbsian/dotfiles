@@ -5,3 +5,5 @@
 --type-add=ruby=.rake,.thor,.feature,Gemfile
 --type-add=ruby=.yml
 --ignore-dir=coverage
+--ignore-dir=log
+--ignore-dir=logs
