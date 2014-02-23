@@ -32,6 +32,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard']
 
 " Make ctags for any gems in your Gemfile available
 set tags+=gems.tags

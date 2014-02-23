@@ -58,6 +58,9 @@ alias hl='heroku logs --tail'
 alias hc='heroku run console'
 alias hr='heroku run'
 
+# Elixir Aliases
+alias mt='mix test'
+
 # Misc Aliases
 alias findn='find . -name'
 alias line_count='xargs wc -l | sort -n -r'
