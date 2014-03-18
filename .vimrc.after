@@ -1,9 +1,26 @@
 set guioptions=aAce
-set statusline=%f\ %m\ %r
+
+set laststatus=2
+set statusline=
+set statusline+=%<\                       " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
+set statusline+=%-40f\                    " relative path
+set statusline+=%=                        " seperate between right- and left-aligned
+set statusline+=%1*%y%*%*\                " file type
+set statusline+=%10(L(%l/%L)%)\           " line
+set statusline+=%2(C(%v/125)%)\           " column
+set statusline+=%P                        " percentage of file
+
 set nowrap
 set pastetoggle=<F12>
 
 color railscasts
+
+if version >= 700
+  autocmd BufNewFile,BufRead *.txt,*.md setlocal spell spelllang=en_us
+  autocmd FileType tex setlocal spell spelllang=en_us
+endif
+
 set guifont=Inconsolata:h18
 let g:CommandTMaxFiles=50000
 
@@ -33,6 +50,10 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard']
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-j>', '<down>'],
+  \ 'PrtSelectMove("k")':   ['<c-k>', '<up>']
+  \ }
 
 " Make ctags for any gems in your Gemfile available
 set tags+=gems.tags
