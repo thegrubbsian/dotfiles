@@ -49,6 +49,10 @@ alias pb='phonegap build'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/logfile start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
+# MySQL Aliases
+alias mysqlstart='mysql.server start'
+alias mysqlstop='mysql.server stop'
+
 # Elasticsearch Aliases
 alias elastic='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 
@@ -70,12 +74,23 @@ alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 alias tag='ctags -R'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
+# Git branch name in prompt
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
 }
 
 export PS1='\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+
+# Highlighter for copying highlighted code to Keynote, etc
+function hlight() {
+  if [ -z "$2" ]
+    then src="pbpaste"
+  else
+    src="cat $2"
+  fi
+  $src | highlight -O rtf --syntax $1 --font Monaco --style solarized-dark --font-size 24 | pbcopy
+}
 
 # Chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
