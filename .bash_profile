@@ -76,7 +76,7 @@ alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimul
 
 # Git branch name in prompt
 parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/ '
 }
 
 export PS1='\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]> '
@@ -93,5 +93,6 @@ function hlight() {
 }
 
 # Chruby
+RUBIES+=(~/.rubies)
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
