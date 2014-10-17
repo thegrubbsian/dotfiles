@@ -22,7 +22,7 @@ set guifont=Inconsolata:h18
 let g:CommandTMaxFiles=50000
 
 "clear whitespace
-nmap <Leader>\ :%s/'/"/g<CR><Esc>:noh<CR>
+nmap <Leader>ws :%s/'/"/g<CR><Esc>:noh<CR>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 

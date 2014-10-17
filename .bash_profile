@@ -1,6 +1,7 @@
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
 # Git Aliases
 alias ga='git add'
@@ -39,7 +40,7 @@ alias rg='bundle exec rails g'
 # Misc Ruby Aliases
 alias fs='bundle exec foreman start -f'
 alias r='bundle exec rake'
-alias sp='bundle exec rspec -cfn'
+alias sp='bundle exec rspec -cfd'
 alias ts='bundle exec rake minitest:all:quick'
 
 # Phonegap Aliases
@@ -63,6 +64,7 @@ alias hc='heroku run console'
 alias hr='heroku run'
 
 # Elixir Aliases
+alias m='mix'
 alias mt='mix test'
 
 # Misc Aliases
