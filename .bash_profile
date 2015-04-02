@@ -1,7 +1,8 @@
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
+
 export BUNDLER_EDITOR=vim
 export EDITOR=vim
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Git Aliases
 alias ga='git add'
@@ -42,6 +43,7 @@ alias fs='bundle exec foreman start -f'
 alias r='bundle exec rake'
 alias sp='bundle exec rspec -cfd'
 alias ts='bundle exec rake minitest:all:quick'
+alias bo='bundle open'
 
 # Phonegap Aliases
 alias pb='phonegap build'

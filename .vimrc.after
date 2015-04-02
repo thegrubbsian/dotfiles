@@ -33,6 +33,9 @@ map <CR> o<Esc>
 
 nmap <C-f> :CtrlP<CR>
 
+" control+delete deletes previous word
+imap <C-BS> <C-W>
+
 au BufNewFile,BufRead *.jst set filetype=html
 
 set foldmethod=indent
