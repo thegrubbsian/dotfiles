@@ -75,7 +75,7 @@ alias line_count='xargs wc -l | sort -n -r'
 alias v='vim .'
 alias reload='source ~/.bash_profile'
 alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
-alias tag='ctags -R'
+alias tag='ctags -f .git/tags -R .'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # Git branch name in prompt
@@ -97,6 +97,5 @@ function hlight() {
 }
 
 # Chruby
-RUBIES+=(~/.rubies)
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
